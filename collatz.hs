@@ -16,7 +16,7 @@ collatz n
 hailstone :: Int -> [Int]
 hailstone n
 	| n <= 1 = [1]
-	| otherwise = n:(hailstone (collatz n))
+	| otherwise = n:hailstone (collatz n)
 
 collatzConjecture :: Int -> Bool
 collatzConjecture n = last (hailstone n) == 1

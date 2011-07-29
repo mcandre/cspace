@@ -2,18 +2,6 @@
 
 -- Collatz Space
 -- Andrew Pennebaker
---
--- Requirements
---
--- Haskell 2010 (http://haskell.org/)
--- Haskell graphviz (http://hackage.haskell.org/packages/archive/graphviz/latest/doc/html/Data-GraphViz.html)
--- Graphviz (http://www.graphviz.org/)
---
--- Example
---
--- $ ./cspace.hs > cspace.dot
--- $ dot -Tpdf cspace.dot > cspace-intermediate.pdf
--- $ pdflatex cspace
 
 module CSpace where
 
