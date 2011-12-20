@@ -9,8 +9,8 @@
  - [GraphViz](http://www.graphviz.org/)
  - [Haskell](http://haskell.org/)
  - [LaTeX](http://latex.org/)
- - Cabal graphviz
- - Cabal quickcheck
+ - [Cabal graphviz](http://hackage.haskell.org/packages/archive/graphviz/latest/doc/html/Data-GraphViz.html)
+ - [Cabal quickcheck](http://hackage.haskell.org/package/QuickCheck)
 
 ## EXAMPLE
 
