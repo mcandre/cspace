@@ -4,8 +4,8 @@ all: cspace.tex cspace.hs treetograph.hs ztalloc.hs collatz.hs
 	pdflatex cspace
 
 clean:
-	-rm cspace.out
-	-rm cspace.log
-	-rm cspace.aux
-	-rm cspace-intermediate.pdf
-	-rm cspace.dot
+	-rm *.out
+	-rm *.log
+	-rm *.aux
+	-rm *-intermediate.pdf
+	-rm *.dot
