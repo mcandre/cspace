@@ -13,17 +13,10 @@ import Ztalloc hiding (main)
 
 ztallocParams :: GraphvizParams String String () String
 ztallocParams = nonClusteredParams {
-  globalAttributes = ga,
-  fmtNode = fn,
-  fmtEdge = fe
+  globalAttributes = [GraphAttrs [ImageScale NoScale], NodeAttrs [Shape Circle]],
+  fmtNode = \(n,l) -> [(Label . StrLabel) l],
+  fmtEdge = \(f,t,l) -> [(Label . StrLabel) l]
   }
-  where
-    ga = [
-      GraphAttrs [ImageScale NoScale],
-      NodeAttrs [Shape Circle]
-      ]
-    fn (n,l) = [(Label . StrLabel) l]
-    fe (f,t,l) = [(Label . StrLabel) l]
 
 main :: IO ()
 main = putStr $ printDotGraph $ graphToDot ztallocParams $ treeToGraph $ limitDepth 13 (unfoldTree enotsliah 1)
