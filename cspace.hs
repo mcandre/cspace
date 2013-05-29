@@ -1,7 +1,7 @@
 #!/usr/bin/env runhaskell
 
-  -- Collatz Space
-  -- Andrew Pennebaker
+-- Collatz Space
+-- Andrew Pennebaker
 
 module CSpace where
 
