@@ -3,6 +3,9 @@ all: cspace.tex cspace.hs treetograph.hs ztalloc.hs collatz.hs
 	dot -Tpdf cspace.dot > cspace-intermediate.pdf
 	pdflatex cspace
 
+lint:
+	hlint .
+
 clean:
 	-rm *.out
 	-rm *.log
