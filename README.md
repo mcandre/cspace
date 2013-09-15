@@ -12,7 +12,23 @@
  - [graphviz](http://hackage.haskell.org/packages/archive/graphviz/latest/doc/html/Data-GraphViz.html)
  - [quickcheck](http://hackage.haskell.org/package/QuickCheck)
 
+## Optional
+
+* [Ruby](https://www.ruby-lang.org/) 1.9+
+* [Guard](http://guardgem.org/) 1.8.2+
+
+Use `bundle` to install Guard.
+
 # DEVELOPMENT
+
+## Guard
+
+Start Guard in a shell, and it will automatically run unit tests when the source code changes:
+
+    $ guard
+        ...
+
+## Lint
 
 Keep the code tidy:
 

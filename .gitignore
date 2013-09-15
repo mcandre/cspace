@@ -3,3 +3,4 @@
 *.aux
 *.dot
 *intermediate*
+Gemfile.lock
