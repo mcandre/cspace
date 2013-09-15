@@ -10,13 +10,13 @@ import Test.QuickCheck
 
 collatz :: Int -> Int
 collatz n
-	| even n = n `div` 2
-	| otherwise = 3 * n + 1
+  | even n = n `div` 2
+  | otherwise = 3 * n + 1
 
 hailstone :: Int -> [Int]
 hailstone n
-	| n <= 1 = [1]
-	| otherwise = n:hailstone (collatz n)
+  | n <= 1 = [1]
+  | otherwise = n:hailstone (collatz n)
 
 collatzConjecture :: Int -> Bool
 collatzConjecture n = last (hailstone n) == 1
