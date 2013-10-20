@@ -16,23 +16,42 @@
 
 * [Ruby](https://www.ruby-lang.org/) 1.9+
 * [Guard](http://guardgem.org/) 1.8.2+
+* [hlint](https://github.com/ndmitchell/hlint)
+* `lacheck`
 
-Use `bundle` to install Guard.
+Install Guard:
+
+    $ bundle
+
+Install HLint:
+
+    $ cabal install hlint
 
 # DEVELOPMENT
 
-## Guard
+## BUILD
 
-Start Guard in a shell, and it will automatically run unit tests when the source code changes:
+    $ make
 
-    $ guard
-        ...
+## CLEAN
 
-## Lint
+    $ make clean
 
-Keep the code tidy:
+## LINT
 
     $ make lint
+
+## GUARD
+
+Guard can automatically recompile as you code.
+
+    $ guard
+    $ emacs .
+
+Guard can automatically lint as you code.
+
+    $ guard -G Guardfile-lint
+    $ emacs .
 
 # EXAMPLE
 

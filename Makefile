@@ -4,7 +4,8 @@ all: cspace.tex cspace.hs treetograph.hs ztalloc.hs collatz.hs
 	pdflatex cspace
 
 lint:
-	hlint .
+	-hlint .
+	-for f in *.tex; do lacheck $$f; done
 
 clean:
 	-rm *.out
