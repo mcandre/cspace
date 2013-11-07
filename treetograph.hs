@@ -9,7 +9,7 @@ import Control.Parallel.Strategies
 import Control.Parallel
 
 getEdges :: (Ord t) => Tree t -> [(t, t, String)]
-getEdges (Node x xs) = nub $ parMap rseq (\y -> (x, rootLabel y, "")) xs ++ concatMap getEdges xs
+getEdges (Node x xs) = nub $ parMap rseq (const (x, rootLabel y, "")) xs ++ concatMap getEdges xs
 
 treeToGraph :: Tree Int -> Gr String String
 treeToGraph tree = mkGraph nodes edges
