@@ -3,9 +3,16 @@ all: cspace.tex cspace.hs treetograph.hs ztalloc.hs collatz.hs
 	dot -Tpdf cspace.dot > cspace-intermediate.pdf
 	pdflatex cspace
 
-lint:
+hlint:
 	-hlint .
+
+lacheck:
 	-for f in *.tex; do lacheck $$f; done
+
+style-check:
+	-style-check.rb *.tex
+
+lint: hlint lacheck style-check
 
 clean:
 	-rm *.out
