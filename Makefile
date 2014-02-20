@@ -2,6 +2,7 @@ all: cspace.tex cspace.hs treetograph.hs ztalloc.hs collatz.hs
 	runhaskell cspace.hs > cspace.dot
 	dot -Tpdf cspace.dot > cspace-intermediate.pdf
 	pdflatex -interaction=nonstopmode cspace
+	convert cspace.pdf cspace.png
 
 hlint:
 	-hlint .
