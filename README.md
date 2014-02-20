@@ -8,6 +8,7 @@
 
  - [GraphViz](http://www.graphviz.org/)
  - [LaTeX](http://latex.org/)
+ - [ImageMagick](http://www.imagemagick.org/)
  - [Haskell](http://haskell.org/)
  - [graphviz](http://hackage.haskell.org/packages/archive/graphviz/latest/doc/html/Data-GraphViz.html)
  - [quickcheck](http://hackage.haskell.org/package/QuickCheck)
