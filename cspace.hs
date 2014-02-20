@@ -5,13 +5,16 @@
 
 module CSpace where
 
+import Data.Text.Lazy
 import Data.Tree
 import Data.Graph.Inductive
 import Data.GraphViz
+import Data.GraphViz.Printing
+import Data.GraphViz.Attributes.Complete
 import TreeToGraph
 import Ztalloc hiding (main)
 
-ztallocParams :: GraphvizParams String String () String
+ztallocParams :: GraphvizParams n Text Text () Text
 ztallocParams = nonClusteredParams {
   globalAttributes = [GraphAttrs [ImageScale NoScale], NodeAttrs [Shape Circle]],
   fmtNode = \(n,l) -> [(Label . StrLabel) l],
@@ -19,4 +22,4 @@ ztallocParams = nonClusteredParams {
   }
 
 main :: IO ()
-main = putStr $ printDotGraph $ graphToDot ztallocParams $ treeToGraph $ limitDepth 13 (unfoldTree enotsliah 1)
+main = putStr $ unpack $ renderDot $ toDot $ graphToDot ztallocParams $ treeToGraph $ limitDepth 13 (unfoldTree enotsliah 1)

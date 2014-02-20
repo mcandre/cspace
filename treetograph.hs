@@ -2,17 +2,18 @@
 
 module TreeToGraph where
 
+import Data.Text.Lazy (Text, pack)
 import Data.List (nub)
 import Data.Tree
 import Data.Graph.Inductive
 import Control.Parallel.Strategies
 import Control.Parallel
 
-getEdges :: (Ord t) => Tree t -> [(t, t, String)]
-getEdges (Node x xs) = nub $ parMap rseq (const (x, rootLabel y, "")) xs ++ concatMap getEdges xs
+getEdges :: (Ord t) => Tree t -> [(t, t, Text)]
+getEdges (Node x xs) = nub $ parMap rseq (\y -> (x, rootLabel y, pack "")) xs ++ concatMap getEdges xs
 
-treeToGraph :: Tree Int -> Gr String String
+treeToGraph :: Tree Int -> Gr Text Text
 treeToGraph tree = mkGraph nodes edges
   where
-    nodes = parMap rseq (\x -> (x, show x)) $ nub $ flatten tree
+    nodes = parMap rseq (\x -> (x, (pack . show) x)) $ nub $ flatten tree
     edges = getEdges tree
