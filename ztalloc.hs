@@ -7,8 +7,7 @@
 module Ztalloc where
 
 import Data.Tree
-import Control.Parallel.Strategies
-import Control.Parallel
+import Control.Parallel.Strategies (parMap, rseq)
 
 import Collatz hiding (main)
 
