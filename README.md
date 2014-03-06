@@ -4,6 +4,11 @@
 
 [http://www.yellosoft.us/cspace](http://www.yellosoft.us/cspace)
 
+# EXAMPLE
+
+    $ cabal install graphviz quickcheck
+    $ make
+
 # REQUIREMENTS
 
  - [GraphViz](http://www.graphviz.org/)
@@ -19,8 +24,9 @@
 * [Guard](http://guardgem.org/) 1.8.2+
 * [hlint](https://github.com/ndmitchell/hlint)
 * `lacheck`
+* [aspelllint](https://github.com/mcandre/aspelllint)
 
-Install Guard:
+Install Guard and aspelllint with:
 
     $ bundle
 
@@ -30,19 +36,24 @@ Install HLint:
 
 # DEVELOPMENT
 
-## BUILD
+## Build
 
     $ make
 
-## CLEAN
+## Clean
 
     $ make clean
 
-## LINT
+## Linting
 
     $ make lint
 
-## GUARD
+## Spell Check
+
+    $ aspelllint
+    ...
+
+## Local CI
 
 Guard can automatically recompile as you code.
 
@@ -53,8 +64,3 @@ Guard can automatically lint as you code.
 
     $ guard -G Guardfile-lint
     $ emacs .
-
-# EXAMPLE
-
-    $ cabal install graphviz quickcheck
-    $ make
