@@ -12,7 +12,7 @@ getEdges :: (Ord t) => Tree t -> [(t, t, Text)]
 getEdges (Node x xs) = nub $ parMap rseq (\y -> (x, rootLabel y, pack "")) xs ++ concatMap getEdges xs
 
 treeToGraph :: Tree Int -> Gr Text Text
-treeToGraph tree = mkGraph nodes edges
+treeToGraph tree = mkGraph ns es
   where
-    nodes = parMap rseq (\x -> (x, (pack . show) x)) $ nub $ flatten tree
-    edges = getEdges tree
+    ns = parMap rseq (\x -> (x, (pack . show) x)) $ nub $ flatten tree
+    es = getEdges tree

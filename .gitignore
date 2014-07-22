@@ -1,3 +1,7 @@
+*.exe
+cspace
+*.o
+*.hi
 *.out
 *.log
 *.aux

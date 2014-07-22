@@ -9,7 +9,7 @@ module Ztalloc where
 import Data.Tree
 import Control.Parallel.Strategies (parMap, rseq)
 
-import Collatz hiding (main)
+import Collatz()
 
 ztalloc :: Int -> [Int]
 ztalloc n = [n * 2, (n - 1) `div` 3]
