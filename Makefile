@@ -1,5 +1,5 @@
-all: cspace.tex cspace.hs treetograph.hs ztalloc.hs collatz.hs
-	runhaskell cspace.hs > cspace.dot
+all: cspace.tex CSpace.hs TreeToGraph.hs Ztalloc.hs Collatz.hs
+	runhaskell CSpace.hs > cspace.dot
 	dot -Tpdf cspace.dot > cspace-intermediate.pdf
 	pdflatex -interaction=nonstopmode cspace
 	convert cspace.pdf cspace.png
