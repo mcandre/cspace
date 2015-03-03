@@ -19,8 +19,8 @@ enotsliah n = (n, filter (/= 0) (ztalloc n))
 
 limitDepth :: Int -> Tree t -> Tree t
 limitDepth d (Node x xs)
-        | d == 0 = Node x []
-        | otherwise = Node x (parMap rseq (limitDepth (d - 1)) xs)
+  | d == 0 = Node x []
+  | otherwise = Node x (parMap rseq (limitDepth (d - 1)) xs)
 
 toTreeString :: (Show t) => Tree t -> Tree String
 toTreeString (Node x xs) = Node (show x) $ parMap rseq toTreeString xs
