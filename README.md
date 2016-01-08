@@ -11,16 +11,16 @@
 
 # REQUIREMENTS
 
- - [GraphViz](http://www.graphviz.org/)
- - [LaTeX](http://latex.org/)
- - [ImageMagick](http://www.imagemagick.org/)
- - [Haskell](http://haskell.org/)
- - [graphviz](http://hackage.haskell.org/packages/archive/graphviz/latest/doc/html/Data-GraphViz.html)
- - [quickcheck](http://hackage.haskell.org/package/QuickCheck)
+* [GraphViz](http://www.graphviz.org/)
+* [LaTeX](http://latex.org/)
+* [ImageMagick](http://www.imagemagick.org/)
+* [Haskell](http://haskell.org/)
+* [graphviz](http://hackage.haskell.org/packages/archive/graphviz/latest/doc/html/Data-GraphViz.html)
+* [quickcheck](http://hackage.haskell.org/package/QuickCheck)
 
 ## Optional
 
-* [Ruby](https://www.ruby-lang.org/) 1.9+
+* [Ruby](https://www.ruby-lang.org/) 2.3+
 * [Guard](http://guardgem.org/) 1.8.2+
 * [hlint](https://github.com/ndmitchell/hlint)
 * `lacheck`
