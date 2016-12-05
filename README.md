@@ -20,47 +20,36 @@
 
 ## Optional
 
-* [Ruby](https://www.ruby-lang.org/) 2.3+
-* [Guard](http://guardgem.org/) 1.8.2+
+* [ruby](https://www.ruby-lang.org/) 2.3+
 * [hlint](https://github.com/ndmitchell/hlint)
 * `lacheck`
 * [aspelllint](https://github.com/mcandre/aspelllint)
-
-Install Guard and aspelllint with:
-
-    $ bundle
-
-Install HLint:
-
-    $ cabal install hlint
+* [pargs](https://github.com/mcandre/pargs)
+* [editorconfig-tools](https://www.npmjs.com/package/editorconfig-tools)
 
 # DEVELOPMENT
 
 ## Build
 
-    $ make
+```
+$ make
+```
 
 ## Clean
 
-    $ make clean
+```
+$ make clean
+```
 
 ## Linting
 
-    $ make lint
+```
+$ make lint
+```
 
 ## Spell Check
 
-    $ aspelllint
-    ...
-
-## Local CI
-
-Guard can automatically recompile as you code.
-
-    $ guard
-    $ emacs .
-
-Guard can automatically lint as you code.
-
-    $ guard -G Guardfile-lint
-    $ emacs .
+```
+$ aspelllint
+...
+```
