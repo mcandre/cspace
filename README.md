@@ -26,6 +26,7 @@
 * [aspelllint](https://github.com/mcandre/aspelllint)
 * [pargs](https://github.com/mcandre/pargs)
 * [editorconfig-tools](https://www.npmjs.com/package/editorconfig-tools)
+* [chktex](http://baruch.ev-en.org/proj/chktex/)
 
 # DEVELOPMENT
 
