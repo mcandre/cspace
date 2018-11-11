@@ -13,6 +13,6 @@ getEdges (Node x xs) = nub $ parMap rseq (\y -> (x, rootLabel y, pack "")) xs ++
 
 treeToGraph :: Tree Int -> Gr Text Text
 treeToGraph tree = mkGraph ns es
-  where
-    ns = parMap rseq (\x -> (x, (pack . show) x)) $ nub $ flatten tree
-    es = getEdges tree
+    where
+        ns = parMap rseq (\x -> (x, (pack . show) x)) $ nub $ flatten tree
+        es = getEdges tree
